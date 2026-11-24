@@ -8,7 +8,7 @@ export class LoginPage {
 
   constructor(page: Page) {
     this.page = page;
-    // The inputs have real <label for="..."> elements, so getByLabel is the most readable option.
+    
     this.usernameInput = page.getByLabel('Username');
     this.passwordInput = page.getByLabel('Password');
     this.signInButton = page.getByRole('button', { name: 'Sign in' });
@@ -22,7 +22,7 @@ export class LoginPage {
     await this.usernameInput.fill(username);
     await this.passwordInput.fill(password);
     await this.signInButton.click();
-    // Prove the login actually worked before any test continues.
+
     await expect(this.page.getByRole('button', { name: 'Logout' })).toBeVisible();
   }
 }

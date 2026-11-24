@@ -23,7 +23,7 @@ npx playwright show-report   # optional HTML report
 
 ## Adding a test case
 
-Add an object to `data/testCases.json`. No code changes needed.
+Add an object to `data/testCases.json`
 
 ```json
 { "id": 7, "project": "Web Application", "task": "API integration", "column": "Review", "tags": ["Feature", "High Priority"] }
